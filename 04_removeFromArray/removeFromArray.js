@@ -4,7 +4,7 @@ const removeFromArray = function(arr, arg) {
     let remove = Array.prototype.slice.call(arguments, 1);
     let newArr = [];
 
-    newArr = arr.filter(x => !remove.includes(x));
+    newArr = arr.filter(x => !remove.some((y) => y === x));
     console.log(newArr);
     
     return newArr;
